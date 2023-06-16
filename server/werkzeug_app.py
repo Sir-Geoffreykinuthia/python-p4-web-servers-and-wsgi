@@ -4,7 +4,13 @@ from werkzeug.wrappers import Request, Response
 @Request.application
 def application(request):
     print(f'This web server is running at {request.remote_addr}')
-    return Response('A WSGI generated this response!')
+    return Response(
+    """
+    A WSGI generated this response!
+    Awesome running Server side!
+    Awesome running the server on a single page.
+    """
+    )
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
